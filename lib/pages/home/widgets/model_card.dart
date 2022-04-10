@@ -5,6 +5,9 @@ import '../../../constants/data.dart';
 import '../../../services/model_inference_service.dart';
 import '../../../services/service_locator.dart';
 import '../../camera/camera_page.dart';
+import '../../camera/camera_page.dart';
+
+
 
 class ModelCard extends StatelessWidget {
   const ModelCard({
@@ -38,6 +41,7 @@ class ModelCard extends StatelessWidget {
   }
 
   void _onTapCamera(BuildContext context) {
+
     locator<ModelInferenceService>().setModelConfig(index);
 
     Navigator.push(

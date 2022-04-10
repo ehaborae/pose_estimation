@@ -66,8 +66,7 @@ class Pose extends AiModel {
     }
 
     if (Platform.isAndroid) {
-      image = image_lib.copyRotate(image, -90);
-      image = image_lib.flipHorizontal(image);
+      image = image_lib.copyRotate(image, -270);
     }
     final tensorImage = TensorImage(TfLiteType.float32);
     tensorImage.loadImage(image);

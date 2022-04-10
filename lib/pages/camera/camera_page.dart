@@ -59,13 +59,14 @@ class _CameraPageState extends State<CameraPage> with WidgetsBindingObserver {
 
   Future<void> _initCamera() async {
     _cameras = await availableCameras();
-    _cameraDescription = _cameras[1];
+    _cameraDescription = _cameras[0];
     _isRun = false;
     _onNewCameraSelected(_cameraDescription);
   }
 
   void _onNewCameraSelected(CameraDescription cameraDescription) async {
     _cameraController = CameraController(
+
       cameraDescription,
       ResolutionPreset.medium,
       enableAudio: false,
@@ -178,6 +179,7 @@ class _CameraPageState extends State<CameraPage> with WidgetsBindingObserver {
     if (_cameraController!.description.lensDirection ==
         _cameras.first.lensDirection) {
       _onNewCameraSelected(_cameras.last);
+      print("front cam");
     } else {
       _onNewCameraSelected(_cameras.first);
     }
@@ -190,11 +192,9 @@ class _CameraPageState extends State<CameraPage> with WidgetsBindingObserver {
       if (_predicting || !_draw) {
         return;
       }
-
       setState(() {
         _predicting = true;
       });
-
       if (_draw) {
         await _modelInferenceService.inference(
           isolateUtils: _isolateUtils,
