@@ -36,6 +36,21 @@ dependencies:
   scidart: ^0.0.2-dev.6
   get_it: ^7.2.0
   equatable: ^2.0.3
+  sqflite: ^1.0.3
+  intl: ^0.17.0
+  conditional_builder_null_safety: ^0.0.6
+  flutter_bloc: ^7.3.0
+  dio: ^4.0.4
+  hexcolor: ^2.0.3
+  shared_preferences: ^2.0.6
+  flutter_svg: ^1.0.3
+  splash_screen_view: 3.0.0
+  sizer: ^2.0.15
+  motion_tab_bar: ^0.1.5
+  fluttertoast: ^8.0.9
+  google_sign_in: ^5.2.4
+  image_picker: ^0.8.4+4
+  font_awesome_flutter: ^9.2.0
 
 
 
